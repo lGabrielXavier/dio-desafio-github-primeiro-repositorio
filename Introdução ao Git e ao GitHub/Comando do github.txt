@@ -1,0 +1,89 @@
+coisa interessante que o windows tem é o "windowns subsystem for linux",ele é um sistema linux rodando dentro do windows
+
+comando DIR/ls(bash) : ele vai trazer pra mim uma lista de diretorios onde a pasta está sendo situada.
+vale a pena dizer que todos os comandos que vao usar possuem VARIANCIAS,possuem flags que sao complementos que passamos
+para esses comandos,que eles acrescentam modificam ou formatam a forma que esses comandos sao devolvidos para a gente.
+-----------------------------------
+
+quando eu nao especificar se for pra win ou linux é pq o comando é o mesmo pros 2.
+
+comando Chance directory: é o CD,esse coando vai possiilitar que a gente navege entre as pastas,ele é igual em qualquer sistema operacional
+"cd / " é usado para localziar o diretorio ex : cd / = vai pra pasta C:, cd /User = vai pra pasta user,usando o dir pra localizar as pastas
+da pra se locomover.
+-----------------------------
+comando cls  = Limpar a tela.
+ctrl + l = limpar tela no linux
+
+--------------------------------
+comando cd .. = cd 2 pontos volta uma pasta no linux ou no windows.
+
+-----------------------------------------------------------------
+comando make directyor(mkdir) = mkdir workspace(exemplo), o comando mkdir é feito para criar pastas
+--------------------------------------------------------------------------------------------
+comando echo = printa no terminal uma frase que você passar ex : "echo hello" vai imprimir o hello
+> : esse simbolo de maior é um redirecionador de fluxo,vai pegar o output a saida da função echo e vai jgoar em um arquivo.
+"echo hello > hello.txt" caso nao tenha esse arquivo ele será criado
+------------------------------
+comando rmdir = comando usado para remover o repositorio com todos os arquivos dentro.
+
+
+
+===================================================================================
+SHA = secure hash algorithm,algoritmo de hash seguro,é um conjunto de funções hash criptograficas de segurança nacional do USA.
+esses dados encriptados geram um conjunto de 40 digitos,ele é unico e serve como identificação :
+ex: arquvio de texto muito grande e voce vai nesse arquivo de texto e roda esse algoritmo ele vai gerar 40 caracteres,se eu vier novamente e alterar uma virgula
+ele vai gerar outro conjunto de 40 caracteres
+
+=======================================================================================
+
+BLOBS,TREES,COMMITS
+são os  3 tipos basicos de obj do git responsavel por versionamento do codigo 
+BLOBS = São onde fica guardado os arquivos,este objeto contem metadados dentro dele,o objBlob vai ter o TIPO/TAMANHO/uma barra com 0 e o conteuudo do arquvio.
+TREES = armazenam os BLOBS,e armazena os commit,ela contem metadados por apontar para um blob,também guarda o nome do arquivo,o blob so guarda o SHA do arquivo,a tree vai ser responsavel pela estrutura.
+COMMITS = ele é o obj que vai aponta para uma arvore,aponta pra o outro commit antes dele,aponta para o autor e para a mensagem também.
+ele é o objeto que vai juntar tudo e vai dar sentido para oque esta fazendo.
+
+===============================================================================================
+
+
+Chaves SSH e tokens : SSH, é uma forma de estabelecer uma conexao segura e incriptada entre 2 maquinas,no caso a gente vai conectar com o servedior do github e a gente vai configurar nossa maquina local com 2 chaves,publica e privada
+temos que gerar a chave SSH pelo git bash :
+
+comnado "ssh-keygen -t ed25519 - C " : 
+"Enter file in which to save the key (/c/Users/User/.ssh/id_ed25519):" < pastas com "." no inicio são pastas ocultas.
+depois vai pedir a senha,coloque a senha,a identificação foi salva em C/users,a chave privada e publica são as mesmas só que uma tem .pub na frente
+comando especial para visualizar o conteudo de uma dessas chaves : "cat id_(chave publica)"
+
+comando ssh agent: é uma entidade que vai ficar encarregada de pegar as chaves e lidar com elas.
+"eval $(ssh-agent - s)" < vai gerar o agent "pid 21313 exemplo"
+
+agora o comando para entregar a chave : "ssh-add id_exemplo" ,vai passar a chave privada,quer dizer q toda vez que chegar uma 
+criptografia privada,ele vai descriptografar com essa chave
+
+
+como clonar o caminho ssh do github : "git clone (link ssh do repositorio)
+
+
+token de acesso pessoal : no site do git vá em "developer settings" >"personal acess tokens">"generate new token"
+
+criando commits : iniciar o git com o comando "git init"
+
+como ver pasta oculta : "ls -a" < mostra arquivos ocultos
+
+configurações iniciais pra primeira vez : "$ git config --global user.email "email" " > "$ git config --global user.name Perkles"
+crie um arquivo ".md" que é o html do linux.
+
+comando "git add *" 
+
+comando "git commit -m" : os comits sao os obj dos git que dao os significados a alterações,esses obj em si levam mensagem de texto e meta dados.
+ ex: " git commit - m "commit inicial"  "
+depois que tiver acesso a lista de alterações a gente vai conseguir identificar qual arquivo que adicionamos e qual commit,e ter acesso a essa mensagem e entender oque ela significa  
+
+
+
+  
+
+
+
+
+ 
